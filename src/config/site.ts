@@ -19,8 +19,7 @@ export const siteConfig = {
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
     { name: "About Us", href: "/about" },
-    { name: "Contact", href: "/contact" },
-    { name: "Reviews", href: "/reviews" }
+    { name: "Contact", href: "/contact" }
   ],
   
   // Footer links
@@ -28,7 +27,6 @@ export const siteConfig = {
     company: [
       { name: "About Us", href: "/about" },
       { name: "Contact Us", href: "/contact" },
-      { name: "Reviews", href: "/reviews" },
       { name: "FAQ", href: "/faq" }
     ],
     services: [
@@ -41,7 +39,9 @@ export const siteConfig = {
       { name: "Privacy Policy", href: "/privacy-policy" },
       { name: "Terms & Conditions", href: "/terms-conditions" },
       { name: "Refund Policy", href: "/refund-policy" },
-      { name: "Disclaimer", href: "/disclaimer" }
+      { name: "Disclaimer", href: "/disclaimer" },
+      { name: "Returns Policy", href: "/returns-policy" },
+      { name: "Shipping Policy", href: "/shipping-policy" }
     ]
   },
   
@@ -89,5 +89,43 @@ export const siteConfig = {
       price: "Starting from $25/page",
       features: ["Chapter-wise Delivery", "Data Analysis", "Defense Preparation"]
     }
+  ],
+
+  // Assignment types for pricing
+  assignmentTypes: [
+    { name: "Essay", basePrice: 15 },
+    { name: "Research Paper", basePrice: 20 },
+    { name: "Thesis", basePrice: 25 },
+    { name: "Dissertation", basePrice: 30 },
+    { name: "Case Study", basePrice: 18 },
+    { name: "Book Review", basePrice: 12 },
+    { name: "Lab Report", basePrice: 16 },
+    { name: "Presentation", basePrice: 14 }
+  ],
+
+  // Academic levels
+  academicLevels: [
+    { name: "High School", multiplier: 0.8 },
+    { name: "Undergraduate", multiplier: 1.0 },
+    { name: "Masters", multiplier: 1.3 },
+    { name: "PhD", multiplier: 1.6 }
+  ],
+
+  // Deadlines
+  deadlines: [
+    { name: "14+ Days", multiplier: 1.0 },
+    { name: "7-13 Days", multiplier: 1.2 },
+    { name: "3-6 Days", multiplier: 1.5 },
+    { name: "24-48 Hours", multiplier: 2.0 },
+    { name: "12-23 Hours", multiplier: 2.5 },
+    { name: "6-11 Hours", multiplier: 3.0 }
+  ],
+
+  // Countries data for world map section
+  countries: [
+    "United States", "United Kingdom", "Australia", "Canada", "Germany", 
+    "France", "Netherlands", "Sweden", "Norway", "Denmark", "Belgium",
+    "Switzerland", "Austria", "Italy", "Spain", "Ireland", "New Zealand",
+    "Singapore", "Malaysia", "UAE", "South Africa"
   ]
 };

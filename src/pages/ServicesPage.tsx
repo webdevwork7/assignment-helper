@@ -1,4 +1,4 @@
-
+import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -7,6 +7,11 @@ import { Badge } from '@/components/ui/badge';
 import { ArrowRight, BookOpen, FileText, GraduationCap, PenTool, Calculator, Globe, Users, Clock, Shield, Award, CheckCircle, Star } from 'lucide-react';
 
 const ServicesPage = () => {
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const allServices = [
     {
       icon: BookOpen,
@@ -115,7 +120,7 @@ const ServicesPage = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
+      <section className="pt-32 pb-20 rainbow-bg-1">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <div className="inline-block px-4 py-2 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full mb-4">
@@ -157,7 +162,7 @@ const ServicesPage = () => {
       </section>
 
       {/* Detailed Services */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white/50 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid gap-12">
             {allServices.map((service, index) => {
@@ -226,7 +231,7 @@ const ServicesPage = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-purple-50/50">
+      <section className="py-20 rainbow-bg-2">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
@@ -256,7 +261,7 @@ const ServicesPage = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white/50 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
@@ -300,22 +305,52 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-600">
-        <div className="max-w-4xl mx-auto px-4 text-center text-white">
+      {/* Updated CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full animate-pulse"></div>
+          <div className="absolute bottom-10 right-10 w-24 h-24 bg-white/10 rounded-full animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 right-1/4 w-16 h-16 bg-white/10 rounded-full animate-pulse delay-500"></div>
+        </div>
+
+        <div className="max-w-4xl mx-auto px-4 text-center text-white relative z-10">
+          <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-8">
+            <Star className="h-6 w-6 text-yellow-300" />
+            <span className="font-medium">Ready to Excel in Your Studies?</span>
+          </div>
+          
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Ready to Excel in Your Studies?
+            Achieve Academic Success
+            <br />
+            <span className="text-yellow-300">With Expert Guidance</span>
           </h2>
-          <p className="text-xl text-purple-100 mb-8 leading-relaxed">
+          
+          <p className="text-xl text-purple-100 mb-12 leading-relaxed max-w-3xl mx-auto">
             Join thousands of students who have achieved academic success with our expert help. 
             Get started today and experience the difference quality makes.
           </p>
+          
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6">
+              <div className="text-3xl font-bold text-yellow-300">98%</div>
+              <div className="text-purple-100">Success Rate</div>
+            </div>
+            <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6">  
+              <div className="text-3xl font-bold text-yellow-300">24/7</div>
+              <div className="text-purple-100">Support Available</div>
+            </div>
+            <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6">
+              <div className="text-3xl font-bold text-yellow-300">500+</div>
+              <div className="text-purple-100">Expert Writers</div>
+            </div>
+          </div>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 text-lg">
+            <Button size="lg" variant="secondary" className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold shadow-lg">
               Order Now
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 text-lg">
+            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 text-lg font-semibold">
               Get Free Quote
             </Button>
           </div>

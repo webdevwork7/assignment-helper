@@ -1,17 +1,17 @@
 
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Star, Users, CheckCircle } from 'lucide-react';
-import { siteConfig } from '@/config/site';
+import OrderForm from './OrderForm';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 overflow-hidden">
+    <section className="relative min-h-screen flex items-center rainbow-bg-1 overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-20 h-20 bg-purple-200 rounded-full opacity-20 animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-16 h-16 bg-pink-200 rounded-full opacity-20 animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-20 w-24 h-24 bg-blue-200 rounded-full opacity-20 animate-pulse delay-500"></div>
-        <div className="absolute bottom-40 right-10 w-12 h-12 bg-purple-200 rounded-full opacity-20 animate-pulse delay-2000"></div>
+        <div className="absolute top-20 left-10 w-20 h-20 bg-purple-200 rounded-full opacity-30 animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-16 h-16 bg-pink-200 rounded-full opacity-30 animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-20 w-24 h-24 bg-blue-200 rounded-full opacity-30 animate-pulse delay-500"></div>
+        <div className="absolute bottom-40 right-10 w-12 h-12 bg-purple-200 rounded-full opacity-30 animate-pulse delay-2000"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 py-20 relative z-10">
@@ -76,45 +76,12 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right column - Visual */}
+          {/* Right column - Working Order Form */}
           <div className="relative">
-            <div className="relative z-10 bg-white rounded-3xl shadow-2xl p-8 border border-purple-100">
-              <div className="space-y-6">
-                <div className="text-center">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Get Instant Quote</h3>
-                  <p className="text-gray-600">Fill the form to get pricing details</p>
-                </div>
-                
-                <div className="space-y-4">
-                  <div className="bg-gray-50 rounded-lg p-4 border-l-4 border-purple-500">
-                    <div className="text-sm text-gray-600 mb-1">Academic Level</div>
-                    <div className="font-semibold text-gray-900">University</div>
-                  </div>
-                  
-                  <div className="bg-gray-50 rounded-lg p-4 border-l-4 border-pink-500">
-                    <div className="text-sm text-gray-600 mb-1">Assignment Type</div>
-                    <div className="font-semibold text-gray-900">Essay Writing</div>
-                  </div>
-                  
-                  <div className="bg-gray-50 rounded-lg p-4 border-l-4 border-blue-500">
-                    <div className="text-sm text-gray-600 mb-1">Deadline</div>
-                    <div className="font-semibold text-gray-900">7 Days</div>
-                  </div>
-                  
-                  <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg p-4 text-white text-center">
-                    <div className="text-lg font-bold">Estimated Price: $45</div>
-                    <div className="text-sm opacity-90">Per page</div>
-                  </div>
-                </div>
-                
-                <Button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white py-3">
-                  Get Detailed Quote
-                </Button>
-              </div>
-            </div>
+            <OrderForm />
             
             {/* Decorative background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-200 to-pink-200 rounded-3xl transform rotate-6 scale-105 opacity-20"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-200 to-pink-200 rounded-3xl transform rotate-6 scale-105 opacity-20 -z-10"></div>
           </div>
         </div>
       </div>

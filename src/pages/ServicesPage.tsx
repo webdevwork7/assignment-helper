@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight, BookOpen, FileText, GraduationCap, PenTool, Calculator, Globe, Users, Clock, Shield, Award, CheckCircle, Star } from 'lucide-react';
+import { ArrowRight, BookOpen, FileText, GraduationCap, PenTool, Calculator, Globe, Users, Clock, Shield, Award, CheckCircle, Star, Phone } from 'lucide-react';
 
 const ServicesPage = () => {
   // Scroll to top when component mounts
@@ -346,11 +346,12 @@ const ServicesPage = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold shadow-lg">
-              Order Now
+            <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold shadow-lg">
+              <Phone className="mr-2 h-5 w-5" />
+              Call Now: +1 (555) 123-4567
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 text-lg font-semibold">
+            <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 text-lg font-semibold shadow-lg">
               Get Free Quote
             </Button>
           </div>

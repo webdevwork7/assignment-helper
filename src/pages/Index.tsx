@@ -12,6 +12,7 @@ import Testimonials from '@/components/Testimonials';
 import StatsSection from '@/components/StatsSection';
 import Services from '@/components/Services';
 import ContactCTA from '@/components/ContactCTA';
+import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -34,6 +35,7 @@ const Index = () => {
       <StatsSection />
       <Services />
       <ContactCTA />
+      <ContactForm />
       <Footer />
     </div>
   );

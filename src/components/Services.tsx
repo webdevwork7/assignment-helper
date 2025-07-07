@@ -2,7 +2,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Phone, BookOpen, FileText, GraduationCap, PenTool, Calculator, Globe } from 'lucide-react';
+import { Phone, BookOpen, FileText, GraduationCap, PenTool, Calculator, Globe, Star } from 'lucide-react';
 import { siteConfig } from '@/config/site';
 
 const Services = () => {
@@ -122,7 +122,7 @@ const Services = () => {
 
                   <Button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white group-hover:shadow-lg transition-all duration-300">
                     <Phone className="mr-2 h-4 w-4" />
-                    Call Now
+                    Call Now: {siteConfig.phone}
                   </Button>
                 </CardContent>
               </Card>
@@ -132,22 +132,31 @@ const Services = () => {
 
         {/* CTA Section */}
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-8 lg:p-12 text-white">
-            <h3 className="text-3xl lg:text-4xl font-bold mb-4">
-              Need a Custom Service?
-            </h3>
-            <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-              Can't find what you're looking for? Contact us for personalized academic assistance 
-              tailored to your specific requirements.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-3">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now: {siteConfig.phone}
-              </Button>
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-3">
-                Get Free Quote
-              </Button>
+          <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 rounded-3xl p-8 lg:p-12 text-white relative overflow-hidden">
+            <div className="absolute inset-0">
+              <div className="absolute top-4 right-4 w-16 h-16 bg-white/10 rounded-full animate-pulse"></div>
+              <div className="absolute bottom-4 left-4 w-12 h-12 bg-white/10 rounded-full animate-pulse delay-1000"></div>
+            </div>
+            <div className="relative z-10">
+              <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-6">
+                <Star className="h-6 w-6 text-yellow-300" />
+                <span className="font-semibold">Need a Custom Service?</span>
+              </div>
+              <h3 className="text-3xl lg:text-4xl font-bold mb-4">
+                Can't Find What You're Looking For?
+              </h3>
+              <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto leading-relaxed">
+                Contact us for personalized academic assistance tailored to your specific requirements.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-3 shadow-lg">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Call Now: {siteConfig.phone}
+                </Button>
+                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-3">
+                  Get Free Quote
+                </Button>
+              </div>
             </div>
           </div>
         </div>

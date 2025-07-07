@@ -2,7 +2,8 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight, BookOpen, FileText, GraduationCap, PenTool, Calculator, Globe } from 'lucide-react';
+import { Phone, BookOpen, FileText, GraduationCap, PenTool, Calculator, Globe } from 'lucide-react';
+import { siteConfig } from '@/config/site';
 
 const Services = () => {
   const services = [
@@ -58,10 +59,10 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-purple-50/50">
+    <section className="py-20 rainbow-bg-2">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
-          <div className="inline-block px-4 py-2 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full mb-4">
+          <div className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-4">
             <span className="text-purple-700 font-medium">Our Services</span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
@@ -119,9 +120,9 @@ const Services = () => {
                     ))}
                   </ul>
 
-                  <Button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white group-hover:shadow-lg transition-all duration-300">
-                    Order Now
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <Button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white group-hover:shadow-lg transition-all duration-300">
+                    <Phone className="mr-2 h-4 w-4" />
+                    Call Now
                   </Button>
                 </CardContent>
               </Card>
@@ -139,10 +140,15 @@ const Services = () => {
               Can't find what you're looking for? Contact us for personalized academic assistance 
               tailored to your specific requirements.
             </p>
-            <Button size="lg" variant="secondary" className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-3">
-              Contact Us Now
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-3">
+                <Phone className="mr-2 h-5 w-5" />
+                Call Now: {siteConfig.phone}
+              </Button>
+              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-3">
+                Get Free Quote
+              </Button>
+            </div>
           </div>
         </div>
       </div>

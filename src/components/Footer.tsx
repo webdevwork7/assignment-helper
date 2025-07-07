@@ -47,6 +47,7 @@ const Footer = () => {
                   <Link 
                     to={link.href} 
                     className="text-gray-300 hover:text-white transition-colors"
+                    onClick={() => window.scrollTo(0, 0)}
                   >
                     {link.name}
                   </Link>
@@ -64,6 +65,7 @@ const Footer = () => {
                   <Link 
                     to={link.href} 
                     className="text-gray-300 hover:text-white transition-colors"
+                    onClick={() => window.scrollTo(0, 0)}
                   >
                     {link.name}
                   </Link>
@@ -113,6 +115,7 @@ const Footer = () => {
                   key={link.name}
                   to={link.href} 
                   className="text-gray-300 hover:text-white text-sm transition-colors"
+                  onClick={() => window.scrollTo(0, 0)}
                 >
                   {link.name}
                 </Link>

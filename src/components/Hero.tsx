@@ -15,7 +15,7 @@ const Hero = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left column - Content */}
           <div className="space-y-8">
             {/* Trust badges */}
@@ -76,9 +76,11 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right column - Working Order Form */}
-          <div className="relative">
-            <OrderForm />
+          {/* Right column - Order Form with better spacing */}
+          <div className="relative flex justify-center lg:justify-end">
+            <div className="w-full max-w-md">
+              <OrderForm />
+            </div>
             
             {/* Decorative background */}
             <div className="absolute inset-0 bg-gradient-to-br from-purple-200 to-pink-200 rounded-3xl transform rotate-6 scale-105 opacity-20 -z-10"></div>

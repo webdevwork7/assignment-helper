@@ -52,8 +52,9 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
-            <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6">
-              Get Started
+            <Button className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-6">
+              <Phone className="mr-2 h-4 w-4" />
+              Call Now
             </Button>
           </div>
 
@@ -81,8 +82,9 @@ const Navbar = () => {
                 </Link>
               ))}
               <div className="px-4">
-                <Button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white">
-                  Get Started
+                <Button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white">
+                  <Phone className="mr-2 h-4 w-4" />
+                  Call Now
                 </Button>
               </div>
             </div>
